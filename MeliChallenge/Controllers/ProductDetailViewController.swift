@@ -58,13 +58,18 @@ class ProductDetailViewController: UIViewController {
             self.constraintFreeShipping.constant = 0
         }
         
-        /*if let status = self.product?.seller.seller_reputation.power_seller_status{
+        if let status = self.product?.seller.seller_reputation.power_seller_status{
             self.sellerType.text = String(format: "Mercadolider %@", status)
-        }*/
+        }
         
-        /*if let profileSeller = self.product?.seller.permalink{
-            self.profileSeller.text = String(format: "Perfil: %@", profileSeller)
-        }*/
+        
     }
     
+    @IBAction func goToProfile(_ sender: Any) {
+        if let profileSeller = self.product?.seller.permalink{
+            if let url = URL(string: profileSeller) {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
 }

@@ -42,15 +42,12 @@ class APIService :  NSObject {
                     
                     if let arrayResults =  try? JSONSerialization.data(withJSONObject: jsonArray["results"] as Any, options: []){
                         
-                        let searchData = try! jsonDecoder.decode([Product].self, from: arrayResults)
-                            completion(searchData)
-                        
-                        /*if let searchData = try? jsonDecoder.decode([Product].self, from: arrayResults){
+                        if let searchData = try? jsonDecoder.decode([Product].self, from: arrayResults){
                             completion(searchData)
                         }else{
                             print("Error al mapear el objeto de tipo Product")
                             completionWithError(Constantes.errorGenerico)
-                        }*/
+                        }
                             
                     }else{
                         print("Error al convertir el array de results a Data type")

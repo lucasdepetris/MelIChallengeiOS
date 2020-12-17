@@ -22,13 +22,13 @@ struct Product: Decodable {
 
 struct Seller: Decodable {
     let id: Float
-    //let permalink:String
-    //let seller_reputation:SellerReputation
+    let permalink:String
+    let seller_reputation:SellerReputation
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        //case permalink = "permalink"
-        //case seller_reputation = "seller_reputation"
+        case permalink = "permalink"
+        case seller_reputation = "seller_reputation"
     }
     
     /*init(from decoder: Decoder) throws {
