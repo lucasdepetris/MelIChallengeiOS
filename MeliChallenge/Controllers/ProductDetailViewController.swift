@@ -21,7 +21,6 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet var constraintFreeShipping: NSLayoutConstraint!
     @IBOutlet var freeShippingLabel: UILabel!
     @IBOutlet var sellerType: UILabel!
-    @IBOutlet var profileSeller: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

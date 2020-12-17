@@ -29,7 +29,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if (!Reachability.isConnectedToNetwork()){
-            print("Internet Connection Not Available!")
+            print(Constantes.notConnection)
             self.showAlertError(message: Constantes.notConnection)
             return
         }
