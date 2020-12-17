@@ -30,24 +30,7 @@ struct Seller: Decodable {
         case permalink = "permalink"
         case seller_reputation = "seller_reputation"
     }
-    
-    /*init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-       
-        if let permalink = try? values.decode(String.self, forKey: .permalink){
-                self.permalink = permalink;
-        }else{
-                self.permalink = "";
-        }
-        
-        if let seller = try? values.decode(SellerReputation.self, forKey: .seller_reputation){
-                self.seller_reputation = seller;
-        }else{
-                self.seller_reputation = Sell;
-        }
-        
-        
-        }*/
+
 }
 
 struct SellerReputation: Decodable {

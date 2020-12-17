@@ -9,8 +9,6 @@ import Foundation
 
 class APIService :  NSObject {
     
-    private let baseURL = "https://api.mercadolibre.com/sites/MLA/search?q="
-    
     func apiToGetSearchData(textToSearch: String,completion : @escaping ([Product]) -> (), completionWithError:@escaping (String) -> ()){
         
         let uc = NSURLComponents()
